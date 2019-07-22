@@ -5,3 +5,11 @@
    </div>
    <%= form.submit %>
  <% end %>
+
+ <table>
+  <% @twiclones.each do |twiclone| %>
+  <tr>
+    <td><%= twiclone.content %></td>
+  </tr>
+  <% end %>
+</table>
