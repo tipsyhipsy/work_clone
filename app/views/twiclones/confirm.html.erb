@@ -1,0 +1,17 @@
+<h3>つぶやく</h3>
+
+<%= form_with(model: @twiclone, url: new_twiclone_path, logal: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>本文：<%= @twiclone.content %></p>
+  <%= form.submit "登録" %>
+<% end %>
+
+
+<%= form_with(model: @twiclone, url:new_twiclone_path, local: true, method: 'get') do |form| %>
+ <%= form.hidden_field :content %>
+
+ <p>本文:<%= @twiclone.content %></p>
+ <%= form.submit "登録" %>
+<%= form.submit "戻る", name: 'back' %>
+<% end %>
