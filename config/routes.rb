@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'twiclones#new'
+  root to: 'twiclones#index'
   resources :twiclones do
     collection do
       post :confirm

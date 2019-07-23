@@ -1,0 +1,15 @@
+<h1>Welcome to Twiclone!!</h1>
+
+<table>
+  <tr>
+    <th>potsed</th>
+  </tr>
+
+  <% @twiclones.each do |blog| %>
+    <tr>
+      <td><%= blog.content %></td>
+    </tr>
+    <% end %>
+</table>
+
+<%= link_to "new tweet", new_twiclone_path %>
