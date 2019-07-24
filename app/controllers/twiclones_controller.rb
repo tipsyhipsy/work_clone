@@ -6,12 +6,16 @@ class TwiclonesController < ApplicationController
   end
 
   def new
-    @twiclone = Twiclone.new
     if params[:back]
       @twiclone = Twiclone.new(content_params)
     else
       @twiclone = Twiclone.new
     end
+  end
+
+  def confirm
+    @twiclone = Twiclone.new(content_params)
+    render :new if @twiclone.invalid?
   end
 
   def create
@@ -22,11 +26,14 @@ class TwiclonesController < ApplicationController
         render 'new'
     end
   end
+  #
+  # def show
+  # end
 
-  def show
+  def edit
   end
 
-  def updata
+  def update
     if @twiclone.update(content_params)
       redirect_to twiclones_path
     else
@@ -36,15 +43,7 @@ class TwiclonesController < ApplicationController
 
   def destroy
     @twiclone.destroy
-    redirect_to new_twiclone_path
-  end
-
-  def confirm
-    @twiclone = Twiclone.new(content_params)
-    render :new if @twiclone.invalid?
-  end
-
-  def edit
+    redirect_to twiclones_path
   end
 
   private

@@ -2,14 +2,16 @@
 
 <table>
   <tr>
-    <th>potsed</th>
+    <%= link_to "new tweet", new_twiclone_path %>
+    <th>一覧</th>
   </tr>
 
-  <% @twiclones.each do |blog| %>
+  <% @twiclones.each do |twiclone| %>
     <tr>
-      <td><%= blog.content %></td>
+      <td><%= twiclone.content %></td>
+      <td><%= link_to "編集", edit_twiclone_path(twiclone.id), data: {confirm: "編集しますか？"} %></td>
+
+      <td><%= button_to "削除", twiclone_path(twiclone.id), method: :delete, data:{confirm: "削除しますか？"} %></td>
     </tr>
     <% end %>
 </table>
-
-<%= link_to "new tweet", new_twiclone_path %>

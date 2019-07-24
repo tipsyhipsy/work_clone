@@ -1,0 +1,150 @@
+
+
+/* default setting
+------------------------------------------- */
+h1,h2,h3,h4.h5,h6,p,ul,li,dl,dt,dd,ol,blockquote {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-weight: normal;
+	line-height: 1.0;
+	list-style: none;
+}
+
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background: #C0DEED url(img/bg_clouds.png) repeat-x 0 0;
+	color: #333333;
+	font-size: 80%;
+	font-family: Verdana;
+}
+
+
+/* color
+------------------------------------------- */
+a:link,a:visited {
+	color: #2276BB;
+	text-decoration: none;
+}
+a:hover,a:active {
+	color: #2276BB;
+	text-decoration: underline;
+}
+
+
+
+/* header
+------------------------------------------- */
+div#rss-header {
+	position: relative;
+	width: 770px;
+	height: 65px;
+	margin: 0 auto 0;
+	background: url(img/logo.png) no-repeat 0 0;
+}
+
+div#rss-header h1#rss-title {
+	position: absolute;
+	top: 90px;
+	left: 20px;
+	overflow: hidden;
+	width: 520px;
+	padding: 25px 0 0;
+	background: url(img/bg_h1.png) no-repeat 0 0;
+}
+
+div#rss-header h1#rss-title a {
+	display: block;
+	padding: 10px;
+	border: 1px #CCCCCC solid;
+	background: #FFFFFF;
+	font-size: 180%;
+}
+
+div#rss-header p#rss-desc {
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	overflow: hidden;
+	width: 520px;
+	height: 15px;
+	padding: 5px;
+	background: #FFFFFF;
+	-moz-border-radius: 5px;
+}
+
+/* items
+------------------------------------------- */
+div.items {
+	width: 730px;
+	margin: 0 auto 20px;
+	padding: 120px 20px 20px;
+	background: #FFFFFF url(img/bg_items.gif) repeat-y 100% 0;
+	-moz-border-radius: 5px;
+}
+
+div.item {
+	position: relative;
+	width: 520px;
+	padding: 10px 0;
+	border-top: 1px #CCCCCC dashed;
+	background: url(img/ic_item.gif) no-repeat 0 10px;
+}
+
+div.item:last-child {
+	border-bottom: 1px #CCCCCC dashed;
+}
+
+div.item:hover {
+	background-color: #F7F7F7;
+}
+
+
+div.item h2.item-title {
+	overflow: hidden;
+	height: 1.5em;
+	margin: 0 0 15px 60px;
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+div.item h2.item-title span.item-ordinal {
+	display: none;
+}
+
+div.item div.item-desc {
+	margin: 0 0 0 60px;
+	height: 2.8em;
+	overflow: hidden;
+	line-height: 1.3;
+}
+
+div.item div.item-desc * {
+	line-height: 1.3;
+}
+
+
+
+div.item div.item-pubDate {
+	position: absolute;
+	top: 2.8em;
+	left: 60px;
+	margin: 0;
+	color: #999999;
+	font-size: 80%;
+	text-align: right;
+}
+
+div.item div.item-author {
+	display: none;
+}
+
+div.item div.item-technorati {
+	display: none;
+}
+
+img {
+	display: none;
+}
