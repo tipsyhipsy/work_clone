@@ -4,13 +4,13 @@
 
 <nav class ="menu">
   <ul>
-    <li><span class="glyphicon glyphicon-home"></span><a href="#">ホーム</a></li>
-    <li><span class="glyphicon glyphicon-bell"></span><a href="#">通知</a></li>
-    <li><span class="glyphicon glyphicon-envelope" ></span><a href="#">メッセージ</a></li>
-    <li><span class="glyphicon glyphicon-book"></span><a href="#">ブックマーク</a></li>
-    <li><span class="glyphicon glyphicon-list"></span><a href="#">リスト</a></li>
+    <li><i class="fas fa-home"></i><a href="#">ホーム</a></li>
+    <li><i class="fas fa-bell"></i><a href="#">通知</a></li>
+    <li><i class="fas fa-envelope"></i><a href="#">メッセージ</a></li>
+    <li><i class="fas fa-book"></i><a href="#">ブックマーク</a></li>
+    <li><i class="fas fa-list"></i><a href="#">リスト</a></li>
   <ul class="new_post">
-    <li><span class="glyphicon glyphicon-send"></span><%= link_to "ツイート", new_twiclone_path %></li>
+    <li><i class="fas fa-paper-plane"></i><%= link_to "ツイート", new_twiclone_path %></li>
   </ul>
 </nav>
 
@@ -18,7 +18,7 @@
   <div class="posted_block">
     <% @twiclones.each do |twiclone| %>
       <figure>
-        <span class="glyphicon glyphicon-user" style="font-size: 50px"></span>
+        <i class="fas fa-user" style="font-size:50px"></i>
       </figure>
 
       <div class="tweet">
