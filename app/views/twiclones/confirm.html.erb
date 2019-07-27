@@ -8,6 +8,6 @@
 
 
 <%= form_with(model: @twiclone, url:new_twiclone_path, local: true, method: 'get') do |form| %>
- <%= form.hidden_field :content %>
- <%= form.submit "戻る", name: 'back' %>
+   <%= form.hidden_field :content %>
+   <%= form.submit "戻る", name: 'back' %>
 <% end %>

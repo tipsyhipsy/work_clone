@@ -1,24 +1,24 @@
 
 <div class="container">
-      <%= form_with(model: @twiclone, local: true, url: choose_new_or_edit ) do |form| %>
-        <% if @twiclone.errors.any? %>
-           <div class="error_explanation">
-             <h2><%= @twiclone.errors.count %>errors.</h2>
-             <ul>
-               <% @twiclone.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-               <% end %>
-             </ul>
-           </div>
-        <% end %>
-
-        <div class ="content">
-          <ul>
-            <li><%= form.label :"tweet" %></li>
-            <li><%= form.text_field :content %></li>
-            <li><%= form.submit %></li>
-            <li><%= link_to "Back", twiclones_path %></li>
-          </ul>
-        </div>
+  <%= form_with(model: @twiclone, local: true, url: choose_new_or_edit ) do |form| %>
+    <% if @twiclone.errors.any? %>
+       <div class="error_explanation">
+         <h2><%= @twiclone.errors.count %>errors.</h2>
+         <ul>
+           <% @twiclone.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+           <% end %>
+         </ul>
+       </div>
     <% end %>
-  </div>
+
+    <div class ="content">
+      <ul>
+        <li><%= form.label :"tweet" %></li>
+        <li><%= form.text_field :content %></li>
+        <li><%= form.submit %></li>
+        <li><%= link_to "Back", twiclones_path %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>
