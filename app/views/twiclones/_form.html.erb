@@ -13,11 +13,11 @@
     <% end %>
 
     <div class ="content">
+      <%= form.label :"tweet" %>
       <ul>
-        <li><%= form.label :"tweet" %></li>
         <li><%= form.text_field :content %></li>
-        <li><%= form.submit %></li>
-        <li><%= link_to "Back", twiclones_path %></li>
+        <li><%= form.submit "送信" %></li>
+        <li><%= link_to "戻る", twiclones_path %></li>
       </ul>
     </div>
   <% end %>
