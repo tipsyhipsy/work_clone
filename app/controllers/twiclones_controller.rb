@@ -21,7 +21,7 @@ class TwiclonesController < ApplicationController
   def create
     @twiclone = Twiclone.new(content_params)
     if @twiclone.save
-      redirect_to twiclones_path
+      redirect_to :root
     else
         render 'new'
     end
