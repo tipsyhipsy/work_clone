@@ -1,10 +1,8 @@
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12">
       <%= form_with(model: @twiclone, local: true, url: choose_new_or_edit ) do |form| %>
         <% if @twiclone.errors.any? %>
-           <div id="error_explanation">
+           <div class="error_explanation">
              <h2><%= @twiclone.errors.count %>errors.</h2>
              <ul>
                <% @twiclone.errors.full_messages.each do |message| %>
@@ -15,12 +13,12 @@
         <% end %>
 
         <div class ="content">
-          <%= form.label :"tweet" %>
-          <%= form.text_field :content %>
-        <%= form.submit %>
-        <% end %>
-        <%= link_to "Back", twiclones_path %>
+          <ul>
+            <li><%= form.label :"tweet" %></li>
+            <li><%= form.text_field :content %></li>
+            <li><%= form.submit %></li>
+            <li><%= link_to "Back", twiclones_path %></li>
+          </ul>
         </div>
-    </div>
+    <% end %>
   </div>
-</div>
