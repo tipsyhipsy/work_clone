@@ -1,3 +1,86 @@
-// Place all the styles related to the twiclones controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+li {
+    list-style:none;
+}
+ul {
+    padding:0;
+}
+
+.top h1 {
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+    box-sizing: border-box;
+    margin-left: 20%;
+}
+
+.menu {
+  background-color:#012F4B;
+  color:#fff;
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.menu ul {
+  font-size: 2rem;
+}
+
+.menu li {
+  margin: 20% 0;
+}
+
+.menu li a{
+  color: white;
+  margin-left: 1rem;
+}
+
+.menu li {
+  padding:5% 10%;
+  text-align:center;
+}
+
+.menu .new_post li{
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: blue;
+}
+
+.posted {
+  height:80%;
+  max-width: 70%;
+  margin-left: 25%;
+  margin-bottom: 10%;
+  background: #ffffff;
+  overflow: hidden;
+  border: solid 1px #eeeeee;
+}
+
+.posted_block figure {
+  width: 50px;
+  padding: 0;
+  margin: 1%;
+}
+
+.posted_block {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.content {
+  margin: 0;
+  position: relative;
+  margin-left: 60px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.buttons {
+  font-size: medium;
+  text-align: right;
+  border-bottom: solid 1px #eeeeee;
+}

@@ -1,17 +1,35 @@
-<h1>Welcome to Twiclone!!</h1>
+  <header class="top">
+    <h1>Welcome to Twiclone!!</h1>
+  </header>
 
-<table>
-  <tr>
-    <%= link_to "new tweet", new_twiclone_path %>
-    <th>一覧</th>
-  </tr>
+    <nav class ="menu">
+        <ul>
+            <li><span class="glyphicon glyphicon-home"></span><a href="#">ホーム</a></li>
+            <li><span class="glyphicon glyphicon-bell"></span><a href="#">通知</a></li>
+            <li><span class="glyphicon glyphicon-envelope" ></span><a href="#">メッセージ</a></li>
+            <li><span class="glyphicon glyphicon-book"></span><a href="#">ブックマーク</a></li>
+            <li><span class="glyphicon glyphicon-list"></span><a href="#">リスト</a></li>
+        <ul class="new_post">
+          <li><span class="glyphicon glyphicon-send"></span><%= link_to "ツイート", new_twiclone_path %></li>
+        </ul>
+    </nav>
 
-  <% @twiclones.each do |twiclone| %>
-    <tr>
-      <td><%= twiclone.content %></td>
-      <td><%= link_to "編集", edit_twiclone_path(twiclone.id), data: {confirm: "編集しますか？"} %></td>
+  <article class="posted">
+    <div class="posted_block">
+      <% @twiclones.each do |twiclone| %>
+        <figure>
+          <span class="glyphicon glyphicon-user" style="font-size: 50px"></span>
+        </figure>
 
-      <td><%= button_to "削除", twiclone_path(twiclone.id), method: :delete, data:{confirm: "削除しますか？"} %></td>
-    </tr>
-    <% end %>
-</table>
+        <div class="content">
+          <p><%= twiclone.content %></p>
+        </div>
+
+        <div class="buttons">
+              <%= link_to "編集", edit_twiclone_path(twiclone.id), data: {confirm: "編集しますか？"} %>
+              <%= link_to "削除", twiclone_path(twiclone.id), method: :delete, data:{confirm: "削除しますか？"} %>
+        </div>
+      <% end %>
+    </div>
+  </article>
+</div>
